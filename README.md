@@ -15,6 +15,7 @@ sales-item-planning-boilerplate/
 ├── scripts/             # 수익성 계산 점검
 ├── templates/           # 문서 양식 3종
 ├── samples/             # 양식에 맞춰 작성된 샘플 3종
+├── prompts/             # 전체 실행 프롬프트
 └── artifacts/
     ├── sources/         # 조사 중 내려받은 원본 자료
     ├── assets/          # 웹페이지에 사용할 이미지·폰트 원본
@@ -23,6 +24,8 @@ sales-item-planning-boilerplate/
     ├── quality-gate/    # 품질 기준과 검사 기록
     └── final/           # 최종 문서 3종·공유 웹페이지
 ```
+
+전체 실행은 사업 조건과 기준을 확정한 뒤 `prompts/pipeline.md`의 내용을 에이전트에게 전달합니다.
 
 ## 공통 작업 규칙
 
