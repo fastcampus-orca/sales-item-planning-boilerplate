@@ -5,7 +5,6 @@
 __pycache__/
 *.py[cod]
 .venv/
-outputs/
 logs/
 *.log
 screenshots/
