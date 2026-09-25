@@ -8,21 +8,17 @@
 
 ```text
 sales-item-planning-boilerplate/
-├── README.md
-├── AGENTS.md            # 공통 작업 지침
-├── CLAUDE.md            # AGENTS.md를 가리키는 링크
-├── docs/                # 시장조사 계산 안내
-├── scripts/             # 수익성 계산 점검
-├── templates/           # 문서 양식 3종
-├── samples/             # 양식에 맞춰 작성된 샘플 3종
-├── prompts/             # 전체 실행 프롬프트
-└── artifacts/
-    ├── sources/         # 조사 중 내려받은 원본 자료
-    ├── assets/          # 웹페이지에 사용할 이미지·폰트 원본
-    ├── rules/           # 작업 전 사업 조건과 작업 기준
-    ├── drafts/          # 작성·수정 중인 문서 3종
-    ├── quality-gate/    # 품질 기준과 검사 기록
-    └── final/           # 최종 문서 3종·공유 웹페이지
+├── references/          # 양식·샘플
+│   ├── templates/       # 문서 양식 3종
+│   └── samples/         # 양식별 작성 샘플 3종
+├── prompts/             # 파이프라인 실행 프롬프트
+└── artifacts/           # 에이전트 산출물
+    ├── raw/             # 조사 중 수집한 원본
+    ├── assets/          # 이미지·폰트 원본
+    ├── rules/           # 사업 조건·작업 기준
+    ├── drafts/          # 작성·수정 중인 문서
+    ├── quality-gate/    # 품질 기준·검사 기록
+    └── final/           # 최종 문서
 ```
 
 전체 실행은 사업 조건과 기준을 확정한 뒤 `prompts/pipeline.md`의 내용을 에이전트에게 전달합니다.
@@ -40,22 +36,20 @@ sales-item-planning-boilerplate/
 | 인터뷰로 정한 사업 조건 | `artifacts/rules/business-brief.md` |
 | 시장조사 기준 | `artifacts/rules/research-criteria.md` |
 | 판매 아이템 선정 기준 | `artifacts/rules/selection-criteria.md` |
-| 계산 입력 (선택) | `artifacts/sources/research-screening.json` |
-| 계산 결과와 보완 사항 (선택) | `artifacts/sources/research-check.json` |
 | 단계별 품질 기준 | `artifacts/quality-gate/criteria.md` |
 | 코디네이터의 품질 검사·수정 요청·재검사 기록 | `artifacts/quality-gate/quality-review.md` |
 
 | 작업 | 사용할 양식 | 작성·수정할 문서 | 최종 문서 |
 | --- | --- | --- | --- |
-| 시장조사 | `templates/market-research-template.md` | `artifacts/drafts/market-research.md` | `artifacts/final/market-research.md` |
-| 후보 선정 | `templates/item-candidates-template.md` | `artifacts/drafts/item-candidates.md` | `artifacts/final/item-candidates.md` |
-| 기획서 작성 | `templates/proposal-template.md` | `artifacts/drafts/sales-item-proposal.md` | `artifacts/final/sales-item-proposal.md` |
+| 시장조사 | `references/templates/market-research-template.md` | `artifacts/drafts/market-research.md` | `artifacts/final/market-research.md` |
+| 후보 선정 | `references/templates/item-candidates-template.md` | `artifacts/drafts/item-candidates.md` | `artifacts/final/item-candidates.md` |
+| 기획서 작성 | `references/templates/proposal-template.md` | `artifacts/drafts/sales-item-proposal.md` | `artifacts/final/sales-item-proposal.md` |
 
 - 템플릿에는 항목만 두고, 실제 내용은 담당 문서에 작성합니다.
-- `samples/`는 양식별 작성 예시입니다.
+- `references/samples/`는 양식별 작성 예시입니다.
 - 작성 담당은 초안을 갱신하고, 코디네이터가 품질 검사를 통과한 문서만 `artifacts/final/`에 반영합니다.
-- 같은 작업 파일을 수정하고 이전 내용은 Git으로 관리합니다. 조사 중 내려받은 원본은 `artifacts/sources/`에 보관합니다.
-- 시장조사는 출처·추정 근거·양식을 지켜 작성합니다. 판매가·비용은 추정하고 수익성에 따른 제외는 후보 선정 단계에서 합니다. 필요하면 [마진 계산 도구](docs/research-check.md)를 사용합니다(Python 3.9 이상).
+- 같은 작업 파일을 수정하고 이전 내용은 Git으로 관리합니다. 조사 중 내려받은 원본은 `artifacts/raw/`에 보관합니다.
+- 시장조사는 출처·추정 근거·양식을 지켜 작성합니다. 판매가·비용은 추정하고 수익성에 따른 제외는 후보 선정 단계에서 합니다.
 
 ### 검사 기록 — 코디네이터
 

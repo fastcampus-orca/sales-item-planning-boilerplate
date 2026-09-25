@@ -17,7 +17,7 @@
 
 ## 문서 작성
 
-- `samples/`는 다른 소재의 형식 예시다. 내용·수치·출처를 실제 조사의 근거로 옮기지 않는다.
+- `references/samples/`는 다른 소재의 형식 예시다. 내용·수치·출처를 실제 조사의 근거로 옮기지 않는다.
 - 문서는 한국어로 작성하고 Markdown 굵게 표시를 사용하지 않는다. 확인한 사실과 추정·미확정 조건을 구분하고, 숫자의 출처와 계산 근거를 남긴다.
 
 ## 사업 조건 확정
@@ -45,7 +45,6 @@
 - 검색이 막히거나 자료가 부족하면 확보한 내용과 분석 가정으로 작성한다. 확인하지 않은 출처·상품·공급 조건을 사실처럼 만들지 않는다.
 - 판매가를 시장가에 맞추거나 마진을 통과시키기 위한 반복 검색·가격 조정을 하지 않는다. 수수료·배송비·광고비·손실충당 등 적용 비용을 빠뜨리거나 중복 계산하지 않는다.
 - 조사 품목과 경쟁 상품은 정한 분량 안에서 정리한다. 후보 수·수익성·실측 확보를 문서 작성 조건으로 두지 않는다.
-- [마진 계산 도구](docs/research-check.md)는 필요할 때만 사용한다. 문서에서 직접 계산해도 된다.
 
 ## 결과 검토 — 코디네이터
 
@@ -60,7 +59,7 @@
 
 - 문서별 파일명과 경로는 README의 문서 저장 표를 따른다. 사업 조건·작업 기준은 `artifacts/rules/`, 작성 중 문서는 `artifacts/drafts/`, 품질 기준·검사 기록은 `artifacts/quality-gate/`에 둔다.
 - 작성 담당은 `artifacts/drafts/`의 초안을 갱신한다. 코디네이터는 품질 검사를 통과한 문서만 `artifacts/final/`에 반영한다. 이전 내용은 Git 이력으로 관리한다.
-- 조사 원본은 `artifacts/sources/`에 저장한다. 양식과 샘플을 결과물로 덮어쓰지 않는다.
+- 조사 원본은 `artifacts/raw/`에 저장한다. 양식과 샘플을 결과물로 덮어쓰지 않는다.
 - 웹페이지 공유를 요청받으면 `artifacts/final/share/`만 배포 대상으로 삼고, 원문 숫자·출처·추정 표기를 유지한다. 실행하지 않은 검사·배포를 완료로 기록하지 않는다.
 
 ## 판단이 필요한 상황
@@ -72,10 +71,9 @@
 작업에 필요한 문서는 아래 링크에서 확인한다. 사업 조건·기준·초안·검사 기록은 현재 단계에서 생성됐는지 확인한다.
 
 - 프로젝트 구조·저장 규칙: [README.md](README.md)
-- 시장 조사 노트 양식: [market-research-template.md](templates/market-research-template.md)
-- 아이템 후보 비교표 양식: [item-candidates-template.md](templates/item-candidates-template.md)
-- 판매 아이템 기획서 양식: [proposal-template.md](templates/proposal-template.md)
-- 형식 참고 샘플: [samples/](samples/)
-- 수익성 검산: [시장조사 계산 점검](docs/research-check.md)
+- 시장 조사 노트 양식: [market-research-template.md](references/templates/market-research-template.md)
+- 아이템 후보 비교표 양식: [item-candidates-template.md](references/templates/item-candidates-template.md)
+- 판매 아이템 기획서 양식: [proposal-template.md](references/templates/proposal-template.md)
+- 형식 참고 샘플: [references/samples/](references/samples/)
 - 사업 조건·작업 기준: [artifacts/rules/](artifacts/rules/) — `business-brief.md`, `research-criteria.md`, `selection-criteria.md` 생성 후 사용
 - 품질 기준·검사 기록: [artifacts/quality-gate/](artifacts/quality-gate/) — `criteria.md`, `quality-review.md` 생성 후 사용

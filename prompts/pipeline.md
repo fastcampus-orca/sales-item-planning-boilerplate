@@ -37,9 +37,9 @@
 - 시장조사 기준: `artifacts/rules/research-criteria.md`
 - 판매 아이템 선정 기준: `artifacts/rules/selection-criteria.md`
 - 품질 기준: `artifacts/quality-gate/criteria.md`
-- 시장 조사 노트 양식: `templates/market-research-template.md`
-- 시장 조사 노트 샘플: `samples/market-research-sample.md`
-- 아이템 후보 비교표 양식: `templates/item-candidates-template.md`
-- 아이템 후보 비교표 샘플: `samples/item-candidates-sample.md`
-- 판매 아이템 기획서 양식: `templates/proposal-template.md`
-- 판매 아이템 기획서 샘플: `samples/proposal-sample.md`
+- 시장 조사 노트 양식: `references/templates/market-research-template.md`
+- 시장 조사 노트 샘플: `references/samples/market-research-sample.md`
+- 아이템 후보 비교표 양식: `references/templates/item-candidates-template.md`
+- 아이템 후보 비교표 샘플: `references/samples/item-candidates-sample.md`
+- 판매 아이템 기획서 양식: `references/templates/proposal-template.md`
+- 판매 아이템 기획서 샘플: `references/samples/proposal-sample.md`
